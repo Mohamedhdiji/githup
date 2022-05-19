@@ -1,0 +1,24 @@
+ALGORITHM Checkpoint1
+VAR
+    ph1:STRING="";
+    NumberOfCaracter:INTEGER=1;
+    NumberOfWords:INTEGER=1;
+    NumberOfVolys:INTEGER=0;
+    i:INTEGER=0;
+BEGIN
+    Read(ph1);
+    WHILE (ph1[i]<>".") DO
+        i=i+1;
+        NumberOfCaracter++
+        IF (ph1[i]=" ") THEN
+           NumberOfWords++ ;
+        END_IF
+        IF (ph1[i]="a" OR ph1[i]="A" OR ph1[i]="e" OR ph1[i]="E" OR ph1[i]="y" OR ph1[i]="Y" OR ph1[i]="u" OR ph1[i]="U" OR ph1[i]="i" OR ph1[i]="I" OR ph1[i]="o" OR ph1[i]="O") THEN 
+        NumberOfVolys++   
+        END_IF
+
+    END_WHILE
+    WRITE("the number of caracter is = ",NumberOfCaracter)
+    WRITE("the number of words is = ",NumberOfWords)
+    WRITE("the number of volys is = ",NumberOfVolys)
+END
